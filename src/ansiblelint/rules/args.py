@@ -241,7 +241,7 @@ if "pytest" in sys.modules:
         collection.register(ArgsRule())
         success = "examples/playbooks/rule-args-module-fail.yml"
         results = Runner(success, rules=collection).run()
-        assert len(results) == 5
+        assert len(results) == 6
         assert results[0].tag == "args[module]"
         assert "missing required arguments" in results[0].message
         assert results[1].tag == "args[module]"

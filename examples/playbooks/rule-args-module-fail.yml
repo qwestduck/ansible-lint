@@ -34,3 +34,7 @@
       ansible.builtin.file:
         path: /opt/software/deployment
         state: away
+
+    - name: An invalid call of win_ping module
+      ansible.windows.win_ping:
+        foo: true
